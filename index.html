@@ -9,45 +9,17 @@
 
     <body>
         <div class="slider__wrapper" id="mySlider">
-            <div class="mySlides fade">
-                <span class="slide1">
-                    Обратите внимание: объекты Date могут быть созданы только путём вызова функции Date в качестве конструктора: обычный вызов функции (то есть, без использования оператора new) вернёт строку вместо объекта Date; в отличие от других объектных типов JavaScript, объекты Date не имеют литерального синтаксиса.
-                </span>
+
+            <div class="ll">
+
             </div>
 
-            <div class="mySlides fade">
-                <span class="slide1">
-                    Строковое значение, представляющее дату. Строка должна быть в одном из форматов, распознаваемых методом Date.parse() (совместимые с IETF RFC 2822 временные метки [на английском, на русском], а также версия ISO8601 [на английском, на русском]).
-                </span>
-            </div>
-
-            <div class="mySlides fade">
-                <span class="slide1">
-                    Дата в JavaScript измеряется в миллисекундах, прошедших с полуночи 1 января 1970 года по UTC. День содержит 86 400 000 миллисекунд. Диапазон дат объекта Date варьируется от -100 000 000 до 100 000 000 дней относительно 1 января 1970 года по UTC.
-                </span>
-            </div>
-
-            <div class="mySlides fade">
-                <span class="slide1">
-                    Принимает те же самые параметры, что и самый длинный вариант конструктора (то есть, от 2 до 7) и возвращает количество миллисекунд, прошедших с 1 января 1970 года 00:00:00 по UTC.
-                </span>
-            </div>
-
-            <div class="mySlides fade">
-                <span class="slide1">
-                    Возвращает числовое значение указанной даты как количество миллисекунд, прошедших с 1 января 1970 года 00:00:00 по UTC (отрицательное значение для даты до этого момента).
-                </span>
-            </div>
 
             <a class="prev" onclick="plusSlides(-1)"><i class="fas fa-chevron-left"></i></a>
             <a class="next" onclick="plusSlides(1)"><i class="fas fa-chevron-right"></i></a>
 
-            <div class="dots">
-                <span class="dot" onclick="currentSlide(1)"></span>
-                <span class="dot" onclick="currentSlide(2)"></span>
-                <span class="dot" onclick="currentSlide(3)"></span>
-                <span class="dot" onclick="currentSlide(4)"></span>
-                <span class="dot" onclick="currentSlide(5)"></span>
+            <div class="dots" id="dots">
+
             </div>
 
 
@@ -58,9 +30,11 @@
         </div>
 
         <script>
+
             document.getElementById('mySlider').style.display='none'
             var delay_popup=5000;
-            //localStorage.setItem('checkbox_one','false');
+            //localStorage.setItem('checkbox_one',check.checked);
+            localStorage.setItem('checkbox_one','false');
             if (localStorage.getItem('checkbox_one') == 'false') {
             setTimeout("document.getElementById('mySlider').style.display='block'", delay_popup);
             }
@@ -96,6 +70,55 @@
                 }
             });
 
+            let array=[
+                "Страницы, которые можно было изменять с помощью скриптового языка, получили название Espresso Pages — они демонстрировали использование скриптового языка для создания игры, проверки пользовательского ввода в формы и создания анимации. Espresso Pages позиционировались как демоверсия, призванная помочь представить, что случится, если в браузер будет внедрён язык Cmm. Работали они только в 16-битовом Netscape Navigator под управлением Windows[14]."    ,
+
+                "В 1992 году компания Nombas (впоследствии приобретённая Openwave[en]) начала разработку встраиваемого скриптового языка Cmm (Си-минус-минус), который, по замыслу разработчиков, должен был стать достаточно мощным, чтобы заменить макросы, сохраняя при этом схожесть с Си, чтобы разработчикам не составляло труда изучить его[11]. "
+                ,
+                'Перед Бренданом Эйхом, нанятым в компанию Netscape 4 апреля 1995 года[16], была поставлена задача внедрить язык программирования Scheme или что-то похожее в браузер Netscape. Поскольку требования были размыты, Эйха перевели в группу, ответственную за серверные продукты, где он проработал месяц, занимаясь улучшением протокола HTTP[16].'
+                ,
+                'В статье «The World’s Most Misunderstood Programming Language Has Become the World’s Most Popular Programming Language»[29] (с англ. — «Самый неправильно понятый язык программирования в мире стал самым популярным в мире языком программирования») Дуглас Крокфорд утверждает, что лидирующую позицию JavaScript занял в связи с развитием AJAX, поскольку браузер стал превалирующей системой доставки приложений.'
+                ,
+                'По данным Black Duck Software (англ.)[31], в разработке открытого программного обеспечения доля использования JavaScript росла. 36 % проектов, выпуски которых состоялись с августа 2008 по август 2009 гг., включают JavaScript, наиболее часто используемый язык программирования с быстрорастущей популярностью.'
+                ,
+                'Объектную модель документа иногда рассматривают как отдельную от JavaScript сущность[44][45][Спецификация 3], что согласуется с определением DOM как независимого от языка интерфейса документа[46][~ 3]. В противоположность этому ряд авторов находит BOM и DOM тесно взаимосвязанными[47][48].'
+                ,
+                "ECMAScript не является браузерным языком и в нём не определяются методы ввода и вывода информации[40]. Это, скорее, основа для построения скриптовых языков. Спецификация ECMAScript описывает типы данных, инструкции, ключевые и зарезервированные слова, операторы, объекты, регулярные выражения, не ограничивая авторов производных языков в расширении их новыми составляющими.",
+
+                "Объектная модель браузера — браузер-специфичная часть языка[42][49], являющаяся прослойкой между ядром и объектной моделью документа[50]. Основное предназначение объектной модели браузера — управление окнами браузера и обеспечение их взаимодействия. Каждое из окон браузера представляется объектом window, центральным объектом DOM."
+            ]
+
+            let radioItem;
+            let slid;
+            var fragment = document.createDocumentFragment();
+            var fragment2 = document.createDocumentFragment();
+
+            for (let i = 0; i < array.length; i++) {
+                n=i+1;
+                //Создаем тег i
+                radioItem = document.createElement('span');
+                slid = document.createElement('span');
+                //Добавляем класс
+                radioItem.classList.add('dot');
+                slid.classList.add('slide1');
+                slid.classList.add('fade');
+                slid.textContent = array[i];
+                //Устанавливаем атрибут
+                radioItem.setAttribute('name', i + 1);
+                slid.setAttribute('namee', i + 1);
+                radioItem.setAttribute("onclick","currentSlide("+n+")");
+                //Добавляем тег во фрагмент
+                fragment.appendChild(radioItem);
+                fragment2.appendChild(slid);
+            }
+            //Добавляем фрагмент в блок radio-wrapper
+            document.querySelector('.dots').appendChild(fragment);
+            document.querySelector('.ll').appendChild(fragment2);
+
+
+
+
+
             var slideIndex = 1;
             showSlides(slideIndex);
             function plusSlides(n){
@@ -108,7 +131,7 @@
 
             function showSlides(n) {
                 var i;
-                var slides = document.getElementsByClassName("mySlides");
+                var slides = document.getElementsByClassName("slide1");
                 var dots = document.getElementsByClassName("dot");
 
                 if (n>slides.length) {
