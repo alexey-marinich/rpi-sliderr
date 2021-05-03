@@ -30,11 +30,9 @@
         </div>
 
         <script>
-
             document.getElementById('mySlider').style.display='none'
-            var delay_popup=5000;
-            //localStorage.setItem('checkbox_one',check.checked);
-            localStorage.setItem('checkbox_one','false');
+            var delay_popup=1000;
+            // localStorage.setItem('checkbox_one','false');
             if (localStorage.getItem('checkbox_one') == 'false') {
             setTimeout("document.getElementById('mySlider').style.display='block'", delay_popup);
             }
